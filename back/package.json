@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "BACKEND is always in behind of the success",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "dev": "DEBUG=debug:* NODE_ENV=DEV nodemon app"
+  },
+  "main": "app_v1.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.1",
+    "morgan": "^1.9.1",
+    "mqtt": "^3.0.0",
+    "nexmo": "^2.5.1",
+    "node-fetch": "^2.6.0",
+    "node-gyp": "^6.0.0",
+    "node-notifier": "^6.0.0",
+    "nodemailer": "^6.3.1",
+    "nodemon": "^1.19.2",
+    "otplib": "^11.0.1",
+    "rebuild": "^0.1.2",
+    "serialport": "^7.1.5",
+    "socketio": "^1.0.0"
+  },
+  "devDependencies": {},
+  "author": "Quach",
+  "license": "ISC"
+}

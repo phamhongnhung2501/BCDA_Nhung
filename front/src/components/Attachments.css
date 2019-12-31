@@ -1,0 +1,7 @@
+.card-attachments .row-attachments td:last-child div{
+    display: none;
+}
+
+.card-attachments .row-attachments:hover > td:last-child div{
+    display: block;
+}

@@ -1,0 +1,65 @@
+.text__head--item{
+    font-size: 1.2rem;
+}
+.bg--temperature{
+    background-color: #16aaff;
+}
+.bg__soil--moisture{
+    background-color: #20c997;
+}
+.bg__ph{
+    background-color: #ff5252;
+}
+.bg__light{
+    background-color: #ffb300;
+}
+.bg__hum{
+    background-color: #0091ea;
+}
+/* -------------TableForSoilMoisture---------------------- */
+.Table__size--col{
+    width: 16rem;
+}
+.Table--bg{
+background-color: #dee2e6 ;
+}
+.Note--warning--low{
+    width: 3rem;
+    height: 2rem;
+    background-color: #a5d6a7
+}
+.Note--warning--high{
+    width: 3rem;
+    height: 2rem;
+    background-color: #1b5e20
+}
+.Note--warning--medium{
+    width: 3rem;
+    height: 2rem;
+    background-color: #4caf50}
+
+.Table--lable--text{
+    margin-left: 15rem;
+}
+.bg-table{
+    background-color: #a5d6a7;
+}
+.warning__statistic{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.Table--lable--text{
+    margin: 0 auto !important;
+    text-align: center;
+}
+@media only screen and (min-device-width: 350px) 
+and (max-device-width: 600px){
+  .Table--lable--text{
+    margin-left: 3rem;
+    font-size: 1.3rem;
+   }
+   .Table__size--col{
+       width: 30%;
+   }
+}

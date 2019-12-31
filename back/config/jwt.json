@@ -1,0 +1,6 @@
+{
+  "secret": "my_farm_nhung_secret_key_adevrrvvevwveege",
+  "tokenLife": "24h",
+  "recover_pw_secret": "1zunds5avbbl",
+  "recoverPwTokenLife": "2h"
+}

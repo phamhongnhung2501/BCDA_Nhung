@@ -1,0 +1,21 @@
+.camera__notify{
+    margin-left: 17rem;
+}
+.camera__camera{
+    margin-left: 13rem;
+    width: 31rem;
+    height: 32rem;
+}
+@media only screen and (min-device-width: 350px) 
+and (max-device-width: 600px){
+    .camera__notify{
+        margin-left: 1rem;
+    }
+    .camera__camera{
+        margin-left: 0rem !important;
+        padding: 0rem !important;
+        width: 23rem !important;
+        height: 22rem !important;
+    }
+
+}

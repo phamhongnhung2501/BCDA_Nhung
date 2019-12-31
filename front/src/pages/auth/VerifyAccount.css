@@ -1,0 +1,29 @@
+.Verify-Account__button-resend{
+    text-align: center;
+    margin: 0 auto !important;
+}
+@media only screen and (max-device-width: 640px){
+    .verify-card{
+        width: 16rem !important;
+        border-radius: 1.5rem !important;
+    }
+
+}
+@media only screen and (min-device-width: 1100px){
+    .verify-card{
+        width: 70rem;
+        border-radius: 2rem !important; 
+    }
+    .verify__send-code{
+        margin-top: 2.5rem;
+    }
+    .verify__phone-number{
+        margin-top: 2.8rem;
+        width: 65%
+    }
+    .verify__lable{
+        width: 30%;
+        margin-top: 2.8rem !important;
+    }
+  
+}

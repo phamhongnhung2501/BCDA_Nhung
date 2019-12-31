@@ -1,0 +1,212 @@
+.table-project__card p{
+    margin-bottom: 0.2rem;
+}
+.table-project__card__header{
+    transform: perspective(300px);
+}
+.table-project__card__header::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 0;
+    left: -10%;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background: #b2ebf2;
+    transform: skew(-15deg);
+    transform-origin: 0 50%;
+    transition: all 0.5s; 
+}
+.table-project__card__header:hover::before {
+    width: 60%;
+}
+.table-project__card__header:focus::before {
+    width: 120%;
+}
+.table-project__card__header:active::before {
+    width: 120%;
+}
+
+.table-project__card__table-color{
+    background-color: #fce4ec;
+}
+
+.table-project__card__table td span:first-child{
+    font-weight: bold;
+}
+
+.table-project__card__table td span:last-child{
+    color: orangered;
+    
+}
+
+.table-project__card__table__col-id{
+    width: 3%;
+}
+
+.table-project__card__table__col-budget{
+    width: 13.5%;
+}
+
+.table-project__card__table__col-work{
+    width: 9%;
+}
+
+.table-project__card__table__col-work-new > p:first-child{
+    font-size: 1 rem;
+    color: #dd2c00;
+    padding-right: 14px;
+}
+
+.table-project__card__table__col-work-ready > p:first-child{
+    font-size:  1 rem;
+    color: #f06292;
+}
+
+.table-project__card__table__col-work-in-progress > p:first-child{
+    font-size:  1 rem;
+    color: #f4511e;
+}
+
+.table-project__card__table__col-work-ready-for-test > p:first-child{
+    font-size:  1 rem;
+    color: #ffab00;
+}
+
+.table-project__card__table__col-work-done > p:first-child{
+    font-size:  1 rem;
+    color: #669900;
+}
+
+.table-project__card__table__col-work-archived > p:first-child{
+    font-size:  1 rem;
+    padding-left: 14px;
+    color: #5C3566;
+}
+.station__config{
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+.station__gateway{
+    overflow: auto;
+}
+.station__input-gateway{
+    overflow: auto;
+
+}
+.station--overflow{
+    height: 4rem !important;
+}
+.station__stage{
+    background-color: #8bc34a;
+    width: 23% !important;
+    margin: 0.5rem !important;
+}
+.station__stage-date{
+    width: 23% !important;
+    /* margin: 0.5rem !important; */
+}
+.station__stage-sensor{
+    width: 23% !important;
+    margin: 0.5rem !important;
+}
+.station__button-back{
+    background-color: #e040fb !important;
+    border: #e040fb !important;
+}
+.station__button-create{
+    background-color : #64dd17 !important;
+    border: #64dd17 !important;
+}
+.station__title{
+    font-family: "Roman";
+}
+.station__create-garden{
+    background-color: #e040fb !important;
+    border: #e040fb !important;
+}
+.station__config{
+    background-color: yellowgreen !important;
+    border: yellowgreen !important;
+}
+.modal-project__header {
+    margin-left: 9rem !;
+}
+.station-loading{
+    height: 5rem !important;
+    text-align: center !important;
+    border-radius: 1rem ;
+}
+.station__digital{
+    width: 100% !important;
+    height: 18.5rem !important;
+}
+.nav__banner{
+    background-color: #81d4fa;
+}
+@media only screen and (min-device-width: 300px) 
+and (max-device-width: 812px){
+    .table-project{
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .table-project__card__table__col-work-new > p:first-child{
+        font-size: 1rem;
+        padding-right: 14px;
+    }
+    .table-project__card__table{
+        width: 1000px;
+    } 
+    .station--input-search-size{
+        width: 5.4rem !important;
+        height: 4rem !important;
+        margin-left: 0rem !important;
+    }
+    .station--button-new{
+        width: 6rem !important;
+        height: 4rem !important;
+        margin-right: 0.4rem !important;
+    }
+    .station__config{
+        width: 6rem !important;
+        height: 4rem !important;
+        margin-left: 1rem !important;
+        padding-left: 1rem !important;
+    }
+    /* .station__config-digital{
+        margin: 0rem !important;
+        padding: 0rem !important;
+    } */
+    .station__project{
+        padding-right: 0rem !important;
+    }
+    .station__title{
+        font-size: 1.5rem !important;
+    }
+    .station__loading--text-size{
+        font-size: 1.5rem !important;
+    }
+    .station-loading{
+        margin-top: 2rem !important;
+    }
+    .station__digital{
+        width: 100% !important;
+        height: 13rem !important;
+    }
+    
+}
+
+.table-project__card-header {
+    background-color: #e0f2f1;
+}
+
+.table-project__h6 {
+    font-size: 0.7rem
+}
+.img--user{
+    width: 80px;
+    height: 80px;
+}

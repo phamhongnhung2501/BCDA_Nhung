@@ -1,0 +1,7 @@
+.sign-back { 
+    background:url('../assets/img/logo/background.png'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

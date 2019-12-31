@@ -1,0 +1,50 @@
+.bgmedium{
+    background: #4caf50;
+}
+.bghigh{
+    background:#1b5e20;
+}
+.bglow{
+    background: #a5d6a7;
+}
+.text_sensor{
+    margin-right: 4rem;
+}
+.text_sensor1{
+    margin-right: 11rem;
+}
+.high_sensor{
+    color: red;
+}
+.low_sensor{
+    color: green;
+}
+.medium_sensor{
+    color: blue;
+}
+.nhaluoi{
+    background-color: #bcaaa4;
+}
+.nhakinh{
+    background-color: #90a4ae;
+}
+@media only screen and (min-device-width: 350px) 
+and (max-device-width: 600px){
+    .text_sensor{
+        margin-right: 10rem;
+    }
+    .text_sensor1{
+        margin-right: 10rem;
+    }
+    .Card--width{
+        width: 1000px;
+    }
+    .Table-col--size{
+        width: 33%;
+        height: 3rem;
+    }
+    .Table-cardbody--text-size{
+        font-size: 1rem !important;
+    }
+}
+

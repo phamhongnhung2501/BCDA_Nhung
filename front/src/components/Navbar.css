@@ -1,0 +1,5 @@
+.navbar .dropdown-menu .list-group {
+    max-height: 30rem;
+    overflow-y: auto;
+    display: -webkit-box;
+}

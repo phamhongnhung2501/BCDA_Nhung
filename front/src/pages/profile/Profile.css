@@ -1,0 +1,66 @@
+.Profile__pointer{
+    cursor: pointer;
+}
+.Profile__imgUpdate{
+    cursor: pointer;
+    position: absolute;
+    margin:auto;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: center;
+}
+.Profile__containerImgUpdate:hover .Profile__iconUpdateAvt{
+    display: block
+}
+.Profile__iconUpdateAvt{
+    cursor: pointer;
+    display: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 90%;
+
+    background: linear-gradient( transparent, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6) 100% );
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    height: 50%;
+    top: 56%;
+    transition: top .13s ease-out;
+}
+.Profile__iconUpdateAvt:hover .Profile__iconUpdateEffect{
+    transform: scale(1.07);
+}
+.Profile__containerImgUpdate{
+    height: 128px;
+    width: 128px;
+    margin:auto;
+    left: 0;
+    right: 0;
+}
+
+.Profile__activity-comment-quote{
+    border-left: 5px solid #f5f5f5;
+    padding: .5rem 1.25rem;
+    margin: 0 0 20px;
+    quotes: none;
+}
+.Profile__marginleft_58px_toRem{
+    margin-left: 3.625rem;
+}
+.Profile__width_88{
+    width: 88%;
+}
+.Profile__bg-text-del{
+    text-decoration: line-through;
+    background-color: '#ffe6e6' !important;
+}
+.Profile__bg-text-ins{
+    text-decoration: underline;
+    background-color: '#e6ffe6' !important;
+}
+.Profile__font-size-078rem{
+    font-size: 0.78rem;
+}
