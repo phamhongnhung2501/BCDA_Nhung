@@ -1,10 +1,10 @@
 const config_network = {
     //  "host": "http://iot-demo.tinasoft.com.vn",
-    host: "http://192.168.1.250",
+    host: "http://localhost",
     port: "8001",
 };
 const config_socket = {
-    ip: "http://192.168.1.250:8001",
+    ip: "http://localhost:8001",
 };
 
 const api_path = config_network.host + ":" + config_network.port + "/api/v1/";

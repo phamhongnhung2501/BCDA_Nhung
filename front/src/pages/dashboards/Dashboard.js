@@ -130,6 +130,8 @@ class Crypto extends React.Component {
             },
         });
             socket.on("farm_" + sub_id, function(value) {
+                console.log(value);
+                
                     if(that.state.socket === true){
                     that.setState({ data: value, data_charts: [...that.state.data_charts, value] });
                     var length = that.state.data_charts.length;

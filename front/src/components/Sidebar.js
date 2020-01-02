@@ -121,7 +121,7 @@ class Sidebar extends React.Component {
                                         <SidebarItem
                                             name='Quản trị viên'
                                             icon={Settings}
-                                            to='/stations/admin'
+                                            to='/farms/admin'
                                         />
                                     ) : null}
                                 </React.Fragment>

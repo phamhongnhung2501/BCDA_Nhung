@@ -61,7 +61,7 @@ class SignIn extends React.Component {
                             is_admin: result.is_admin
                         }))
                     }
-                    window.location.replace("/stations");
+                    window.location.replace("/farms");
                 }
             })
         }, 500);

@@ -22,9 +22,7 @@ import Temp from "../../assets/img/photos/temp.png";
 import Soil from "../../assets/img/photos/soil.png";
 import Hum from "../../assets/img/photos/hum.png";
 import moment from "moment";
-import "./ControlStation.css";
 import Notification from "../../components/Notification";
-import WetherStation from "./WetherStation";
 
 const utils = require("../../utils/utils");
 const config_socket = require("../../config/config").config_socket;
@@ -61,6 +59,7 @@ class Controlstation extends Component {
         };
         socket = socketIOClient(this.state.endpoint);
     }
+
     send(name, status) {
         let data = {};
         data.id = name;
@@ -106,6 +105,12 @@ class Controlstation extends Component {
                 );
             } else {
                 if(result.length > 0){
+                    // that.setState({
+                    //     sensor1: result[0].sensor_1,
+                    //     sensor2: result[0].sensor_2,
+                    //     sensor3: result[0].sensor_3,
+                    //     time: result[0].time,
+                    // });
                 }
             
             }
@@ -119,23 +124,21 @@ class Controlstation extends Component {
             <React.Fragment>
                 <Card>
                     <CardHeader>
-                        <div className=' d-inline '>
-                            <h3 className='text-center font-weight-bold'>Thời gian cập nhập vào nhà kính {location}:</h3>
-                            <h4 className='text-success text-center'>
+                        <h1 className='text-center font-weight-bold d-inline mt-4'>
+                            Nhà kính {location}
+                        </h1>
+                        <div className='float-right d-inline '>
+                            <h4 className='text-center font-weight-bold'>Thời gian cập nhập:</h4>
+                            <h4 className='text-success'>
                                 {moment(time).format("DD/MM/YYYY h:mm:ss a")}
                             </h4>
                         </div>
                     </CardHeader>
                     <CardBody>
-                        <Row className="mt-4" >
-                            <Col xs="8" className="cotrol-station__sensor">
-                            <WetherStation/>
-                            </Col>
-                        </Row>         
-                        <Row className="mt-4" >
-                            <Col xs='12' md='8' sm='12' className="cotrol-station__sensor">
+                        <Row>
+                            <Col xs='12' md='4' sm='12'>
                                 <Card body outline color='primary'>
-                                    {/* <h2 className='text-center'>Cảm biến 1</h2> */}
+                                    <h2 className='text-center'>Cảm biến 1</h2>
                                     <CardBody>
                                         <InputGroup className='my-4'>
                                             <InputGroupAddon addonType='prepend'>
@@ -174,12 +177,11 @@ class Controlstation extends Component {
 
                                         <Row className='mt-5'>
                                             <Col xs='12' md='6' sm='12'>
+                                                <h4 className='text-center'>Đèn 1</h4>
                                                 <CustomImg
                                                     key={utils.randomString()}
                                                     src={RL1 === "01" ? LightOn : LightOff}
                                                     alt='button'
-                                                    width={200}
-                                                    height={200}
                                                     className='img-fluid'
                                                 />
                                                 <div className='d-flex justify-content-center mt-3 d-inline '>
@@ -204,12 +206,11 @@ class Controlstation extends Component {
                                                 </div>
                                             </Col>
                                             <Col xs='12' md='6' sm='12'>
+                                                <h4 className='text-center'>Đèn 2</h4>
                                                 <CustomImg
                                                     key={utils.randomString()}
                                                     src={RL2 === "11" ? FanOn : FantOff}
                                                     alt='button'
-                                                    width={200}
-                                                    height={200}
                                                     className='img-fluid'
                                                 />
                                                 <div className='d-flex justify-content-center mt-3 d-inline '>
@@ -220,7 +221,7 @@ class Controlstation extends Component {
                                                         onClick={() => {
                                                             this.send(GW_name, "10");
                                                         }}>
-                                                        Tắt máy bơm
+                                                        Tắt máy
                                                     </Button>
                                                     <Button
                                                         className=''
@@ -229,11 +230,172 @@ class Controlstation extends Component {
                                                         onClick={() => {
                                                             this.send(GW_name, "11");
                                                         }}>
-                                                        Bật máy bơm
+                                                        Bật máy
                                                     </Button>
                                                 </div>
                                             </Col>
                                         </Row>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+
+                            <Col xs='12' md='4' sm='12'>
+                                <Card body outline color='primary'>
+                                    <h2 className='text-center'>Cảm biến 2</h2>
+                                    <CardBody>
+                                        <InputGroup className='my-4'>
+                                            <InputGroupAddon addonType='prepend'>
+                                                <Button color='success'>
+                                                    &ensp;&ensp;Tên&ensp;&ensp;
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <Input
+                                                className='font-weight-bold'
+                                                value={sensor2.name}
+                                                disabled
+                                            />
+                                        </InputGroup>
+                                        <InputGroup className='my-4'>
+                                            <InputGroupAddon addonType='prepend'>
+                                                <Button color='danger'>
+                                                    &ensp;&ensp;ID&ensp;&ensp;&ensp;
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <Input
+                                                className='font-weight-bold'
+                                                value={sensor2.id}
+                                                disabled
+                                            />
+                                        </InputGroup>
+                                        <InputGroup className='my-4'>
+                                            <InputGroupAddon addonType='prepend'>
+                                                <Button color='primary'>Tín hiệu</Button>
+                                            </InputGroupAddon>
+                                            <Input
+                                                className='font-weight-bold text-success'
+                                                value={sensor2.RF_signal}
+                                                disabled
+                                            />
+                                        </InputGroup>
+                                        <Card>
+                                            <Row>
+                                                <Col xs='3 ' boder>
+                                                    <CustomImg
+                                                        key={utils.randomString()}
+                                                        src={Temp}
+                                                        alt='button'
+                                                        className='img-fluid  my-1 ml-2'
+                                                    />
+                                                </Col>
+                                                <Col xs='9 my-auto'>
+                                                    <h4 className='text-center text-danger float-left font-weight-bold'>
+                                                        Nhiệt độ: {sensor2.EOC} °C
+                                                    </h4>
+                                                </Col>
+                                            </Row>
+                                        </Card>
+                                        <Card>
+                                            <Row>
+                                                <Col xs='3 ' boder>
+                                                    <CustomImg
+                                                        key={utils.randomString()}
+                                                        src={Soil}
+                                                        alt='button'
+                                                        className='img-fluid my-1 ml-2'
+                                                        size='1x'
+                                                    />
+                                                </Col>
+                                                <Col xs='9 my-auto'>
+                                                    <h4 className='text-center text-primary float-left font-weight-bold'>
+                                                        Độ ẩm đất: {sensor2.value} %
+                                                    </h4>
+                                                </Col>
+                                            </Row>
+                                        </Card>
+                                        <h4 className='font-weight-bold'>Pin</h4>
+                                        <Progress
+                                            percent={sensor2.battery === null ? 0 : sensor2.battery}
+                                        />
+                                    </CardBody>
+                                </Card>
+                            </Col>
+
+                            <Col xs='12' md='4' sm='12'>
+                                <Card body outline color='primary'>
+                                    <h2 className='text-center'>Cảm biến 3</h2>
+                                    <CardBody>
+                                        <InputGroup className='my-4'>
+                                            <InputGroupAddon addonType='prepend'>
+                                                <Button color='success'>
+                                                    &ensp;&ensp;Tên&ensp;&ensp;
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <Input
+                                                className='font-weight-bold'
+                                                value={sensor3.name}
+                                                disabled
+                                            />
+                                        </InputGroup>
+                                        <InputGroup className='my-4'>
+                                            <InputGroupAddon addonType='prepend'>
+                                                <Button color='danger'>
+                                                    &ensp;&ensp;ID&ensp;&ensp;&ensp;
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <Input
+                                                className='font-weight-bold'
+                                                value={sensor3.id}
+                                                disabled
+                                            />
+                                        </InputGroup>
+                                        <InputGroup className='my-4'>
+                                            <InputGroupAddon addonType='prepend'>
+                                                <Button color='primary'>Tín hiệu</Button>
+                                            </InputGroupAddon>
+                                            <Input
+                                                className='font-weight-bold text-success'
+                                                value={sensor3.RF_signal}
+                                                disabled
+                                            />
+                                        </InputGroup>
+                                        <Card>
+                                            <Row>
+                                                <Col xs='3 ' boder>
+                                                    <CustomImg
+                                                        key={utils.randomString()}
+                                                        src={Temp}
+                                                        alt='button'
+                                                        className='img-fluid  my-1 ml-2'
+                                                    />
+                                                </Col>
+                                                <Col xs='9 my-auto'>
+                                                    <h4 className='text-center text-danger float-left font-weight-bold'>
+                                                        Nhiệt độ: {sensor3.EOC} °C
+                                                    </h4>
+                                                </Col>
+                                            </Row>
+                                        </Card>
+                                        <Card>
+                                            <Row>
+                                                <Col xs='3 ' boder>
+                                                    <CustomImg
+                                                        key={utils.randomString()}
+                                                        src={Hum}
+                                                        alt='button'
+                                                        className='img-fluid  my-1 ml-2'
+                                                    />
+                                                </Col>
+                                                <Col xs='9 my-auto'>
+                                                    <h4 className='text-center text-primary float-left font-weight-bold'>
+                                                        Độ ẩm: {sensor3.value} %
+                                                    </h4>
+                                                </Col>
+                                            </Row>
+                                        </Card>
+                                        <h4 className='font-weight-bold'>Pin</h4>
+                                        <Progress
+                                            percent={sensor3.battery === null ? 0 : sensor3.battery}
+                                        />
                                     </CardBody>
                                 </Card>
                             </Col>

@@ -7,12 +7,6 @@
 .bglow{
     background: #a5d6a7;
 }
-.text_sensor{
-    margin-right: 4rem;
-}
-.text_sensor1{
-    margin-right: 11rem;
-}
 .high_sensor{
     color: red;
 }
@@ -24,12 +18,6 @@
 }
 @media only screen and (min-device-width: 350px) 
 and (max-device-width: 600px){
-    .text_sensor{
-        margin-right: 10rem;
-    }
-    .text_sensor1{
-        margin-right: 10rem;
-    }
     .Card--width{
         width: 1000px;
     }

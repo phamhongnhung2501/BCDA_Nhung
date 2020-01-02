@@ -14,7 +14,7 @@ function getData(callback) {
         data: {}
     })
     .then(result => {
-        console.log(result);
+        // console.log(result);
         
         return callback(false,  result.data)
     })

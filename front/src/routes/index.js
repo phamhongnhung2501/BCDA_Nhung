@@ -69,7 +69,7 @@ const dashboardWithoutSidebarRoutes = {
             component: Profile
         },
         {
-            path: "/stations/admin",
+            path: "/farms/admin",
             name: "Admin Page",
             component: Admin
         },
@@ -80,7 +80,7 @@ const dashboardWithoutSidebarRoutes = {
 
 
 const pageRoutes = {
-    path: "/stations",
+    path: "/farms",
     name: "Stations",
     icon: LayoutIcon,
     component: Default
@@ -136,7 +136,7 @@ const landingRoutes = {
     name: "Landing Page",
     children: [
         {
-            path: "/stations",
+            path: "/farms",
             name: "List Stations Page",
             component: Stations
         },
